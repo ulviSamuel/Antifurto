@@ -349,7 +349,7 @@
 
       void openedDoor()
       {
-        if (digitalRead(hallSensor) == LOW && control.getSystemON() && !control.getAlarmON())
+        if (digitalRead(hallSensor) == LOW && control.getSystemON() && !control.getAlarmON() && !control.getTimerActStmON())
         {
            control.setAlarmON(true);
            timer.setPause(activDisacPause);
